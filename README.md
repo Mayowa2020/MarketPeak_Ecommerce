@@ -8,9 +8,9 @@ You have been assigned to develop an e-commerce website for a new online marketp
 
 ### 1. Implement Version Control with Git
 
-#### 1.1. Initialize Git Repository**
+#### 1.1. Initialize Git Repository\*\*
 
-**
+\*\*
 Begin by creating a project directory named "MarketPeak_Ecommerce" and initializing a Git repository inside it.
 
 ```bash
@@ -104,21 +104,24 @@ Follow a structured workflow for developing, testing, and deploying updates to y
 - **Step 2:** Stage, commit, and push changes to GitHub.
 - **Step 3:** Create pull requests for code review and merge changes into the main branch.
 
-## 4. Documenting the Deployment Process
+### 4. Documenting the Deployment Process
 
 Here is a detailed documentation of the steps taken to deploy the "MarketPeak_Ecommerce" platform using Git, Linux, and AWS, including any troubleshooting or challenges faced and their solutions.
 
-### Troubleshooting and Solutions
+#### Troubleshooting and Solutions
 
 1. **SSH Connection to EC2 Instance:**
+
    - **Issue:** Initially faced difficulty connecting to the EC2 instance via SSH.
    - **Solution:** Ensured that the security group associated with the EC2 instance allowed SSH access from my IP address. Generated SSH keypair using `ssh-keygen` and added the public key to the EC2 instance for authentication.
 
 2. **HTTPD Configuration for Website:**
+
    - **Issue:** The website was not loading correctly after copying files to the httpd directory.
    - **Solution:** Checked httpd error logs (`/var/log/httpd/error_log`) for any issues. Discovered that permissions were not set correctly on some files. Used `chmod` and `chown` commands to adjust permissions and ownership of files in the httpd directory.
 
 3. **HTTPS Clone vs. SSH Clone:**
+
    - **Issue:** Confusion regarding whether to use HTTPS or SSH for cloning the GitHub repository on the EC2 instance.
    - **Solution:** Decided to use SSH for cloning as it provides a more secure and authenticated connection to GitHub. Generated SSH keypair on the EC2 instance and added the public key to GitHub for authentication.
 
